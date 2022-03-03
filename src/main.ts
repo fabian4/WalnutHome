@@ -1,5 +1,5 @@
 import {PuppetPadlocal} from "wechaty-puppet-padlocal";
-import {Message, ScanStatus, WechatyBuilder} from "wechaty";
+import {Contact, Message, ScanStatus, WechatyBuilder} from "wechaty";
 import Config from "./config.js";
 
 const token: string = Config.WECHATY_PUPPET_SERVICE_TOKEN            // padlocal token
@@ -27,9 +27,9 @@ const bot = WechatyBuilder.build({
 //         console.log(`${user} logout`);
 //     })
 
-// bot.on("message", async (message: Message) => {
-//         console.log(`on message: ${message.toString()}`);
-//     })
+bot.on("message", async (message: Message) => {
+        console.log(`on message: ${message.toString()}`);
+    })
 
 bot.start()
 
