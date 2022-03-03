@@ -1,6 +1,6 @@
 import {PuppetPadlocal} from "wechaty-puppet-padlocal";
 import {Message, ScanStatus, WechatyBuilder} from "wechaty";
-import Config from "./config";
+import Config from "./config.js";
 
 const token: string = Config.WECHATY_PUPPET_SERVICE_TOKEN            // padlocal token
 const puppet = new PuppetPadlocal({ token })
