@@ -1,11 +1,11 @@
 import {PuppetPadlocal} from "wechaty-puppet-padlocal";
-import {Contact, log, Message, ScanStatus, WechatyBuilder} from "wechaty";
+import {Contact, log, Message, ScanStatus, Wechaty, WechatyBuilder} from "wechaty";
 import Config from "./config.js";
 
 // const token: string = Config.WECHATY_PUPPET_SERVICE_TOKEN            // padlocal token
 // const puppet = new PuppetPadlocal({ token })
 
-const bot = WechatyBuilder.build({
+const bot = new Wechaty({
     name: Config.BotName,
     puppet: "wechaty-puppet-padlocal",
     puppetOptions: {
@@ -41,5 +41,8 @@ async function onMessage (msg: Message) {
 bot.on("message", onMessage)
 
 bot.start()
+    .then(() => log.info('StarterBot', 'Starter Bot Started.'))
+    .catch((e: any) => log.error('StarterBot', e))
+
 
 console.log(Config.BotName, "started");

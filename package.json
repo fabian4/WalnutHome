@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/fabian4/WalnutHome#readme",
   "dependencies": {
-    "wechaty": "^1.11.28",
+    "wechaty": "^0.63.6",
     "wechaty-puppet-padlocal": "^0.4.2"
   },
   "devDependencies": {
