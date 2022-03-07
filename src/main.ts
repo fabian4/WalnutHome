@@ -1,6 +1,7 @@
 import {Contact, log, Message, ScanStatus, Wechaty} from "wechaty";
 import Config from "./config";
 import PuppetPadlocal from "wechaty-puppet-padlocal";
+import onMessage from "./message";
 
 const puppet = new PuppetPadlocal({
         token: Config.WECHATY_PUPPET_SERVICE_TOKEN
@@ -27,14 +28,6 @@ bot.on("login", (user: Contact) => {
 bot.on("logout", (user: Contact) => {
         console.log(`${user} logout`);
     })
-
-async function onMessage(msg: Message) {
-    log.info('StarterBot', msg.toString())
-
-    if (msg.text() === 'ding') {
-        await msg.say('dong')
-    }
-}
 
 bot.on("message", onMessage)
 
