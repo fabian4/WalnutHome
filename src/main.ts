@@ -1,15 +1,14 @@
 import {log, Message, Wechaty} from "wechaty";
 import Config from "./config.js";
+import PuppetPadlocal from "wechaty-puppet-padlocal";
 
-// const token: string = Config.WECHATY_PUPPET_SERVICE_TOKEN            // padlocal token
-// const puppet = new PuppetPadlocal({ token })
+const puppet = new PuppetPadlocal({
+        token: Config.WECHATY_PUPPET_SERVICE_TOKEN
+})
 
 const bot = new Wechaty({
     name: Config.BotName,
-    puppet: "wechaty-puppet-padlocal",
-    puppetOptions: {
-        token: Config.WECHATY_PUPPET_SERVICE_TOKEN
-    }
+    puppet
 })
 
 // bot.on("scan", async (qrcode: string, status: ScanStatus) => {
@@ -29,7 +28,7 @@ const bot = new Wechaty({
 //         console.log(`${user} logout`);
 //     })
 
-async function onMessage (msg: Message) {
+async function onMessage(msg: Message) {
     log.info('StarterBot', msg.toString())
 
     if (msg.text() === 'ding') {

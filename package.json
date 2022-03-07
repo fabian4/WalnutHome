@@ -2,13 +2,12 @@
   "name": "walnuthome",
   "version": "1.0.0",
   "description": "Wechaty Walnut Home for 5G",
-  "type": "module",
   "engines": {
     "node": ">=16",
     "npm": ">=7"
   },
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" node src/main.ts",
+    "start": "ts-node src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +21,9 @@
   },
   "homepage": "https://github.com/fabian4/WalnutHome#readme",
   "dependencies": {
-    "wechaty": "^0.63.6",
-    "wechaty-puppet-padlocal": "^0.4.2"
+    "wechaty": "^0.68",
+    "wechaty-puppet": "^0.41.9",
+    "wechaty-puppet-padlocal": "^0.4.1"
   },
   "devDependencies": {
     "@chatie/tsconfig": "^4.6.2"
