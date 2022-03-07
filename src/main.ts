@@ -1,5 +1,5 @@
-import {log, Message, Wechaty} from "wechaty";
-import Config from "./config.js";
+import {Contact, log, Message, ScanStatus, Wechaty} from "wechaty";
+import Config from "./config";
 import PuppetPadlocal from "wechaty-puppet-padlocal";
 
 const puppet = new PuppetPadlocal({
@@ -11,22 +11,22 @@ const bot = new Wechaty({
     puppet
 })
 
-// bot.on("scan", async (qrcode: string, status: ScanStatus) => {
-//         if (status === ScanStatus.Waiting && qrcode) {
-//             const qrcodeImageUrl = ["https://api.qrserver.com/v1/create-qr-code/?data=", encodeURIComponent(qrcode)].join("");
-//             console.log(`onScan: ${ScanStatus[status]}(${status}) - ${qrcodeImageUrl}`);
-//         } else {
-//             console.log(`onScan: ${ScanStatus[status]}(${status})`);
-//         }
-//     })
+bot.on("scan", async (qrcode: string, status: ScanStatus) => {
+        if (status === ScanStatus.Waiting && qrcode) {
+            const qrcodeImageUrl = ["https://api.qrserver.com/v1/create-qr-code/?data=", encodeURIComponent(qrcode)].join("");
+            console.log(`onScan: ${ScanStatus[status]}(${status}) - ${qrcodeImageUrl}`);
+        } else {
+            console.log(`onScan: ${ScanStatus[status]}(${status})`);
+        }
+    })
 
-// bot.on("login", (user: Contact) => {
-//         console.log(`${user} login`);
-//     })
-//
-// bot.on("logout", (user: Contact) => {
-//         console.log(`${user} logout`);
-//     })
+bot.on("login", (user: Contact) => {
+        console.log(`${user} login`);
+    })
+
+bot.on("logout", (user: Contact) => {
+        console.log(`${user} logout`);
+    })
 
 async function onMessage(msg: Message) {
     log.info('StarterBot', msg.toString())
