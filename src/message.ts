@@ -10,11 +10,11 @@ export default async function onMessage(msg: Message) {
         return
     }
     log.info(Config.BotName, msg.text())
-    for (let i = 0; i < Config.GROUP.length; i++) {
-        if(Config.GROUP[i] === id){
-            continue;
-        }
-        const contact: Contact = await Contact.find(Config.GROUP[i])
-        await contact.say(msg.id + ': ' + msg.text())
-    }
+    // for (let i = 0; i < Config.GROUP.length; i++) {
+    //     if (Config.GROUP[i] === id) {
+    //         continue;
+    //     }
+    //     const contact: Contact = await Contact.find(Config.GROUP[i])
+    //     await contact.say(msg.id + ': ' + msg.text())
+    // }
 }

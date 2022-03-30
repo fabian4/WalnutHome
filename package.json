@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/fabian4/WalnutHome#readme",
   "dependencies": {
-    "wechaty": "^0.68",
-    "wechaty-puppet": "^0.41.9",
-    "wechaty-puppet-padlocal": "^0.4.1"
+    "wechaty": "^1.10.4",
+    "wechaty-puppet": "^1.11.12",
+    "wechaty-puppet-walnut": "^1.11.8"
   },
   "devDependencies": {
     "@chatie/tsconfig": "^4.6.2"
