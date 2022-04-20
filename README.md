@@ -1,8 +1,6 @@
 # WalnutHome
 Wechaty Walnut Home for 5G
 
-## How to join
-
 1. 下载安装调试客户端。
 
    > 需要一部非 IOS 系统的手机
