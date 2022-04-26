@@ -1,5 +1,5 @@
 import {Contact, log, Message, WechatyBuilder} from "wechaty";
-import Config from "./config";
+import Config from "./config.js";
 import PuppetWalnut from "wechaty-puppet-walnut";
 
 const puppet = new PuppetWalnut({
