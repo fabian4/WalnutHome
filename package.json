@@ -2,6 +2,7 @@
   "name": "walnuthome",
   "version": "1.0.0",
   "description": "Wechaty Walnut Home for 5G",
+  "type": "module",
   "engines": {
     "node": ">=16",
     "npm": ">=7"
