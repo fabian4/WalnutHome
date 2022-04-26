@@ -2,7 +2,11 @@ import {Contact, log, Message, WechatyBuilder} from "wechaty";
 import Config from "./config";
 import PuppetWalnut from "wechaty-puppet-walnut";
 
-const puppet = new PuppetWalnut()
+const puppet = new PuppetWalnut({
+    port: 30001,
+})
+
+log.level('silly')
 
 const bot = WechatyBuilder.build({
     name: Config.BotName,
