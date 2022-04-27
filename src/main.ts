@@ -6,7 +6,7 @@ const puppet = new PuppetWalnut({
     port: 30001,
 })
 
-log.level('verbose')
+log.level('silly')
 
 const bot = WechatyBuilder.build({
     name: Config.BotName,
