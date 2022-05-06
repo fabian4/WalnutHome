@@ -24,7 +24,7 @@
   "dependencies": {
     "wechaty": "^1.10.4",
     "wechaty-puppet": "^1.11.12",
-    "wechaty-puppet-walnut": "^1.18.3"
+    "wechaty-puppet-walnut": "^1.18.4"
   },
   "devDependencies": {
     "@chatie/tsconfig": "^4.6.2"
