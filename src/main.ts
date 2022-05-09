@@ -32,9 +32,9 @@ bot.on("message", async (msg: Message) => {
     await msg.talker().say("Get it!")
     log.info(Config.BotName, msg.text())
     for (let i = 0; i < Config.GROUP.length; i++) {
-        if (Config.GROUP[i] === id) {
-            continue;
-        }
+        // if (Config.GROUP[i] === id) {
+        //     continue;
+        // }
         const contact = await bot.Contact.find({id: Config.GROUP[i]})
         await contact!.say(msg.talker().id + ': ' + msg.text())
     }
