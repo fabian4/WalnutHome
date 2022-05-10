@@ -29,7 +29,7 @@ bot.on("message", async (msg: Message) => {
     if (Config.GROUP.indexOf(id) === -1) {
         return
     }
-    await msg.talker().say("Get it!")
+    await msg.talker().say("Got it!")
     log.info(Config.BotName, msg.text())
     for (let i = 0; i < Config.GROUP.length; i++) {
         // if (Config.GROUP[i] === id) {
