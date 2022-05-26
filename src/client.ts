@@ -25,6 +25,7 @@ import {
     log,
 }             from 'wechaty-puppet'
 import {IoClient, IoClientOptions, WechatyBuilder} from "wechaty";
+import PuppetWalnut from "wechaty-puppet-walnut";
 
 const welcome = `
 | __        __        _           _
@@ -49,8 +50,13 @@ async function main () {
     console.info(welcome)
     log.info('Client', 'Starting for WECHATY_TOKEN: %s', token)
 
+    const puppet = new PuppetWalnut({
+        port: 30001,
+    })
+
     const wechaty = WechatyBuilder.build({
         name: token,
+        puppet
     })
 
     let port
