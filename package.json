@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node --loader ts-node/esm src/main.ts",
+    "client": "node --loader ts-node/esm src/client.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
