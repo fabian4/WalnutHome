@@ -19,7 +19,7 @@
  *
  */
 
-import 'dotenv/config.js'
+// import 'dotenv/config.js'
 
 import {
     log,
@@ -44,14 +44,17 @@ __________________________________________________
 
 `
 
+log.level('silly')
+
+
 async function main () {
-    const token = 'aa3d0146-eab3-4905-b88f-78f33d042661'
+    const token = 'puppet_wxwork_b88f78f33d042661'
 
     console.info(welcome)
     log.info('Client', 'Starting for WECHATY_TOKEN: %s', token)
 
     const puppet = new PuppetWalnut({
-        port: 30001,
+        // port: 30001,
     })
 
     const wechaty = WechatyBuilder.build({

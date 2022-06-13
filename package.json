@@ -7,6 +7,13 @@
     "node": ">=16",
     "npm": ">=7"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/src/mod.js",
+      "require": "./dist/cjs/src/mod.js"
+    }
+  },
+  "typings": "./dist/esm/src/mod.d.ts",
   "scripts": {
     "start": "node --loader ts-node/esm src/main.ts",
     "client": "node --loader ts-node/esm src/client.ts",
@@ -23,9 +30,10 @@
   },
   "homepage": "https://github.com/fabian4/WalnutHome#readme",
   "dependencies": {
-    "wechaty": "^1.10.4",
+    "wechaty": "^0.62.3",
     "wechaty-puppet": "^1.11.12",
-    "wechaty-puppet-walnut": "^1.18.6"
+    "wechaty-puppet-service": "^1.18.2",
+    "wechaty-puppet-walnut": "^1.18.8"
   },
   "devDependencies": {
     "@chatie/tsconfig": "^4.6.2"
